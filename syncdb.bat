@@ -1,3 +1,3 @@
-call ..\..\venv\Scripts\activate.bat
+call ..\..\..\venv\Scripts\activate.bat
 rem xpython
 python manage.py syncdb
