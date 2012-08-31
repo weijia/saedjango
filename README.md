@@ -24,3 +24,4 @@ Ref
 =========
 
 http://blog.chedushi.com/archives/3598
+http://www.cnblogs.com/qtsharp/archive/2012/01/12/2320774.html
