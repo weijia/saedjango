@@ -123,7 +123,22 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
+#################################
+# Added for auth
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    "django.core.context_processors.request",
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
+)
 
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -153,9 +168,19 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #'allauth.socialaccount.providers.facebook',
+    #'allauth.socialaccount.providers.google',
+    #'allauth.socialaccount.providers.github',
+    #'allauth.socialaccount.providers.linkedin',
+    #'allauth.socialaccount.providers.openid',
+    #'allauth.socialaccount.providers.soundcloud',
+    #'allauth.socialaccount.providers.twitter',
 )
 
 # A sample logging configuration. The only tangible logging
