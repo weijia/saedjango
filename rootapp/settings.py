@@ -181,6 +181,7 @@ INSTALLED_APPS = (
     #'allauth.socialaccount.providers.openid',
     #'allauth.socialaccount.providers.soundcloud',
     #'allauth.socialaccount.providers.twitter',
+    'webmanage',
 )
 
 # A sample logging configuration. The only tangible logging
