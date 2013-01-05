@@ -6,7 +6,9 @@ Basic codes for django 1.4 on SAE.
 
 Usage
 =========
-If you want to use this code base, please change the app name in config.yaml first.
+If you want to use this code base, please£º
+1. Change the app name in config.yaml first.
+2. Change SECRET_KEY in rootapp/settings.py
 
 
 How this is created

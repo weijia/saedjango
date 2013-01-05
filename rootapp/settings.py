@@ -2,6 +2,11 @@
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+######### Added for relative path start
+import os
+PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+########## Added for relative path end
+
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -93,7 +98,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(PROJECT_PATH, '../static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -115,7 +120,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'g-yjv2wm_=_+r2j9v2u3ak$!b+i2qz=#e2#h3nmrt2l6+_wps$'
+SECRET_KEY = 'd1%%cegb#n*%iuk#qw^@ag#nji-erl+za!3$lz$&amp;2!spcpasno'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
